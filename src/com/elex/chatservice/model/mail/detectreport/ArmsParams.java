@@ -1,0 +1,39 @@
+package com.elex.chatservice.model.mail.detectreport;
+
+public class ArmsParams
+{
+	private String	id;
+	private int		num;
+	private int		star;
+
+	public String getId()
+	{
+		return id;
+	}
+
+	public void setId(String id)
+	{
+		this.id = id;
+	}
+
+	public int getNum()
+	{
+		return num;
+	}
+
+	public void setNum(int num)
+	{
+		this.num = num;
+	}
+
+	public int getStar()
+	{
+		return star;
+	}
+
+	public void setStar(int star)
+	{
+		this.star = star;
+	}
+
+}

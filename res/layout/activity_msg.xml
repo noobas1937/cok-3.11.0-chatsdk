@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dip"
+	android:orientation="vertical">
+	
+    <TextView 
+        android:id="@+id/msg_current_user"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:textSize="15dip"
+        android:text="当前用户"/>
+
+     <TextView
+        android:id="@+id/pushTextView"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip"
+        android:scrollbars="vertical"/>
+     
+     <LinearLayout 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:gravity="center_vertical">
+        
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="target User"/>
+         <RadioGroup 
+	         android:id="@+id/choose_user_group"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:gravity="center_horizontal"
+	         android:orientation="horizontal">
+	         <!--  
+	         <RadioButton 
+	             android:id="@+id/msg_user1"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:checked="true"
+	             android:text="user1"/>
+	         <RadioButton 
+	             android:id="@+id/msg_user2"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:text="user2"/>
+	         <RadioButton 
+	             android:id="@+id/msg_user3"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:text="user3"/>
+	         <RadioButton 
+	             android:id="@+id/msg_user4"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:text="user4"/>
+	             -->
+	         <RadioButton 
+	             android:id="@+id/msg_user7"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:checked="true"
+	             android:text="user7"/>
+	         <RadioButton 
+	             android:id="@+id/msg_user8"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:text="user8"/>
+     	</RadioGroup>
+     </LinearLayout>
+     
+     
+   
+    <EditText
+        android:id="@+id/enter_noti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:hint="@string/enter_description_xiaomi" />
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+	        android:id="@+id/send_room"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="left|top"
+	         android:textSize="13dip" 
+	        android:text="@string/sender_room" >
+	    </Button>
+	    
+        <Button
+		      android:id="@+id/send_group"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_gravity="right|top"
+		       android:textSize="13dip" 
+		      android:text="@string/sender_group" >
+  		</Button>
+    </FrameLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/record_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_audio"
+            android:textSize="13dip" />
+
+        <Button
+            android:id="@+id/stop_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/record_audio"
+            android:text="@string/stop_record"
+            android:textSize="13dip" />
+        
+         <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/play_voice"
+            android:textSize="13dip" />
+    </RelativeLayout>
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+	       android:id="@+id/send"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_gravity="left|top"
+	        android:textSize="13dip" 
+	       android:text="发送文字" />
+        
+         <Button
+		     android:id="@+id/send_audio"
+		     android:layout_width="wrap_content"
+		     android:layout_height="wrap_content" 
+		     android:layout_gravity="right|top"
+		     android:textSize="13dip" 
+		     android:text="发送语音" />
+    </FrameLayout>
+</LinearLayout>

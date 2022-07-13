@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="2dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="20dp"
+    android:paddingTop="2dp" >
+
+    <TextView
+        android:id="@+id/recycle_mail_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:layout_gravity="right"
+        android:gravity="right|center_vertical"
+        android:text="您已领取过奖励的邮件会自动进入该回收站，并在30天后删除"
+        android:textColor="#64583A"
+        android:textSize="@dimen/cs__textSmall" />
+</LinearLayout>

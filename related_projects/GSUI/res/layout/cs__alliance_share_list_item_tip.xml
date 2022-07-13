@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toplayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/share_title"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/title_image_bg" />
+
+    <RelativeLayout
+        android:id="@+id/share_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp" >
+
+        <LinearLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/share_btn_refresh"
+            android:gravity="center_vertical" >
+
+            <FrameLayout
+                android:id="@+id/headImageContainer"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/alliance_share_head_image_bg" >
+
+                <ImageView
+                    android:id="@+id/headImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/cs__content_description_head_picture"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/g044" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/refreshtip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="1条新消息"
+                android:textColor="#d0b597" />
+
+            <ImageView
+                android:id="@+id/refresh_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/share_refresh_arrow" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/refresh_layout"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/share_list_divier" />
+    </RelativeLayout>
+
+</LinearLayout>

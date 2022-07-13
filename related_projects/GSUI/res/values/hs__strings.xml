@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Helpshift English strings -->
+  <string name="gs__help_header">Help</string>
+  <string name="gs__question_header">Question</string>
+  <string name="gs__conversation_header">Conversation</string>
+  <string name="cs__chat_activity">Chat Activity</string>
+  <string name="gs__new_conversation_header">New Conversation</string>
+  <string name="gs__faq_header">FAQ</string>
+  <string name="gs__submit_conversation_btn">Submit</string>
+  <string name="gs__send_msg_btn">Send</string>
+  <string name="gs__mark_helpful_toast">Question has been marked as Helpful</string>
+  <string name="gs__mark_unhelpful_toast">Question has been marked as Not Helpful</string>
+  <string name="gs__new_conversation_btn">START A NEW CONVERSATION</string>
+  <string name="gs__contact_us_btn">CONTACT US</string>
+  <string name="gs__change_btn">Change</string>
+  <string name="gs__done_btn">Done</string>
+  <string name="gs__attach_btn">Ok, attach</string>
+  <string name="gs__review_btn">Ok, review</string>
+  <string name="gs__unsolved_btn">No, unsolved</string>
+  <string name="gs__solved_btn">Yes, solved!</string>
+  <string name="gs__review_dialog_positive_btn">Rate and Review</string>
+  <string name="gs__review_dialog_neutral_btn">Remind me later</string>
+  <string name="gs__review_dialog_negative_btn">Never ask me again</string>
+  <string name="gs__rsc_progress_msg">Sending screenshot.</string>
+  <string name="gs__ca_msg">We\'re happy to help you!</string>
+  <string name="gs__cr_msg">What else can we help you with?</string>
+  <string name="gs__conversation_started_message">
+    Your message has been received. Thanks for contacting us!
+  </string>
+  <string name="gs__review_dialog_msg">
+    Would you mind taking a moment to review our app? It won\'t take more than a minute. Thanks
+    for your support!
+  </string>
+  <string name="gs__mark_yes_no_question">Was this helpful?</string>
+  <string name="gs__mark_yes">YES</string>
+  <string name="gs__mark_no">NO</string>
+  <string name="gs__question_helpful_message">You found this helpful.</string>
+  <string name="gs__question_unhelpful_message">You didn\'t find this helpful.</string>
+  <string name="gs__network_unavailable_msg">Network not available.</string>
+  <string name="gs__faq_helpful_msg">Helpful</string>
+  <string name="gs__faq_unhelpful_msg">Not Helpful</string>
+  <string name="gs__confirmation_msg">Thanks for messaging us! Did we answer all your questions?</string>
+  <string name="gs__conversation_end_msg">This conversation has ended.</string>
+  <string name="gs__new_conversation_msg">Tap the icon below to start a new conversation</string>
+  <string name="gs__search_hint">Describe your problem</string>
+  <string name="gs__search_title">Search</string>
+  <string name="gs__new_conversation_hint">What\'s on your mind?</string>
+  <string name="gs__username_hint">Name</string>
+  <string name="gs__email_hint">Email (optional)</string>
+  <string name="gs__email_required_hint">Email</string>
+  <string name="gs__chat_hint">Type your message</string>
+  <string name="gs__empty_section">Sorry! No questions available in this section.</string>
+  <string name="gs__search_footer">Can\'t find what you were looking for?</string>
+  <string name="gs__conversation_detail_error">Please describe your problem</string>
+  <string name="gs__username_blank_error">Please enter a valid name</string>
+  <string name="gs__invalid_email_error">Please enter a valid email</string>
+  <string name="gs__invalid_description_error">Invalid description</string>
+  <string name="gs__screenshot_sent_msg">Screenshot sent</string>
+  <string name="gs__screenshot_limit_error">Screenshot size should not exceed %.2f MB</string>
+  <string name="gs__screenshot_cloud_attach_error">
+    Error attaching screenshot. Please choose an image available locally on the device.
+  </string>
+  <string name="gs__privacy_policy">
+    We will only ask for your details when you report your first
+    issue. For more details read our %1$s privacy policy %2$s
+  </string>
+  <string name="gs__sending_msg">Sending...</string>
+  <string name="gs__screenshot_upload_error_msg">Error uploading screenshot</string>
+  <string name="gs__data_not_found_msg">Data not found</string>
+  <string name="gs__network_error_msg">Oops! Something went wrong</string>
+  <string name="gs__sending_fail_msg">Not delivered. Tap to retry.</string>
+  <string name="gs__dm_video_loading">Loading Video...</string>
+  <plurals name="gs__notification_content_title">
+    <item quantity="one">New message from Support</item>
+    <item quantity="other">%d new messages from Support</item>
+  </plurals>
+  <string name="gs__notification_content_text">RE:</string>
+  <string name="gs__faqs_search_footer">No FAQs found.</string>
+
+  <string name="gs__review_request_message">Would you like to review the app?</string>
+  <string name="gs__review_accepted_message">Accepted review request</string>
+  <string name="gs__review_title">Rate Our App</string>
+  <string name="gs__review_message">
+    Please give us 5 star to help us make it better
+  </string>
+  <string name="gs__rate_button">Rate</string>
+  <string name="gs__feedback_button">Send Feedback</string>
+  <string name="gs__review_close_button">Close</string>
+  <string name="gs__attach_screenshot_btn">Attach Screenshot</string>
+
+  <string name="gs__faqs_updating">Updating FAQs...</string>
+  <string name="gs__faqs_uptodate">FAQs up-to-date</string>
+  <string name="gs__faqs_updation_failure">Failed to update FAQs</string>
+  
+  <string name="cs__translate_info_sample">translate from en</string>
+  <string name="cs__chat_message_sample">In order to use the Software and related services on www.cok.com, You must first agree to this License Agreement. android@cok.com.</string>
+  <string name="cs__chat_name_sample">John Snow</string>
+  <string name="cs__chat_alliance_sample">(Night\'s Watch) </string>
+  <string name="cs__chat_vip_sample">VIP4 </string>
+  <string name="cs__content_description_head_picture">head picture</string>
+</resources>

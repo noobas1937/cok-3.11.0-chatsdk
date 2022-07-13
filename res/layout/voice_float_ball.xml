@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voice_ball"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/floatBall"
+         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/realtime_voice_btn_disable"
+        android:scaleType="fitCenter"/>
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nearby_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingLeft="5dp" >
+
+    <com.elex.chatservice.util.FixedAspectRatioFrameLayout
+        android:id="@+id/user_pic_layout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true" >
+
+        <com.elex.chatservice.util.RoundImageView
+            android:id="@+id/user_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/solid_circle"
+            android:scaleType="fitCenter"
+            android:src="@drawable/g044" >
+        </com.elex.chatservice.util.RoundImageView>
+    </com.elex.chatservice.util.FixedAspectRatioFrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user_pic_layout" >
+
+        <RelativeLayout
+            android:id="@+id/content_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/right_layout"
+                android:gravity="start"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/vipLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="none"
+                        android:text="@string/cs__chat_vip_sample"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#C4B093"
+                        android:singleLine="true"
+                        android:textSize="@dimen/cs__textMessage"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/allianceLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="none"
+                        android:singleLine="true"
+                        android:text="@string/cs__chat_alliance_sample"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#C4B093"
+                        android:textSize="@dimen/cs__textMessage" />
+
+                    <TextView
+                        android:id="@+id/nameLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="none"
+                        android:singleLine="true"
+                        android:text="@string/cs__chat_name_sample"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#C4B093"
+                        android:textSize="@dimen/cs__textMessage" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/distanceText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="none"
+                    android:clickable="false"
+                    android:gravity="left|center_vertical"
+                    android:text="距离0.5km"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#C2A169"
+                    android:textSize="@dimen/cs__textSizeName" />
+
+                <TextView
+                    android:id="@+id/lastLoginTimeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="none"
+                    android:singleLine="true"
+                    android:text="上次登录时间:2016-9-21 16:02"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#C2A169"
+                    android:textSize="@dimen/cs__textSizeName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/right_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:padding="10dp" 
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/nearby_like_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:clickable="false"
+                    android:src="@drawable/nearby_like_btn" />
+
+                <TextView
+                    android:id="@+id/nearby_like_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:autoLink="none"
+                    android:gravity="left|center_vertical"
+                    android:text="0"
+                    android:clickable="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#C4B093"
+                    android:textSize="@dimen/cs__textMessage" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/content_top_layout"
+            android:scaleType="fitXY"
+            android:src="#000000" />
+    </RelativeLayout>
+
+</RelativeLayout>

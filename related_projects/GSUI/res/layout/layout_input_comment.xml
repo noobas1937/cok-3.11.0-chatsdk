@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:gravity="center_vertical"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp" >
+
+    <Button
+        android:id="@+id/gs__sendMessageBtn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/btn_chat_send"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/gs__actionBarTextColorPrimary"
+        android:textSize="@dimen/cs__textSendButton" />
+
+    <EditText
+        android:id="@+id/gs__messageText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@+id/gs__sendMessageBtn"
+        android:background="@drawable/text_field_bg2"
+        android:ems="10"
+        android:imeOptions="actionSend"
+        android:inputType="textMultiLine"
+        android:maxLength="500"
+        android:maxLines="@integer/gs__chat_max_lines"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@color/gs__messages_text_color"
+        android:textSize="17sp" />
+
+</RelativeLayout>

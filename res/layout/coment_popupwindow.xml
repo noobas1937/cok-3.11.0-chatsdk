@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/commentpopuplayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#bb000000"
+        android:paddingTop="10dp"
+        android:gravity="center_horizontal"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/comment_del_btn"
+            android:layout_width="156dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_yellow"
+            android:text="删除"
+            android:textColor="#d4bfa4"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/item_popupwindows_cancel"
+            android:layout_width="156dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_yellow"
+            android:text="取消"
+            android:textColor="#d4bfa4"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

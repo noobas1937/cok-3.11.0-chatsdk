@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="35dp"
+    android:background="@drawable/share_btn_refresh"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/menu_like"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.5"
+        android:clickable="true"
+        android:drawableLeft="@drawable/menu_love"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="赞"
+        android:textColor="#d0b597"
+        android:textSize="@dimen/cs__textSizeName"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/menu_divider" />
+
+    <TextView
+        android:id="@+id/menu_comment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.5"
+        android:clickable="true"
+        android:drawableLeft="@drawable/menu_comment"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="评论"
+        android:textColor="#d0b597"
+        android:textSize="@dimen/cs__textSizeName"/>
+
+</LinearLayout>

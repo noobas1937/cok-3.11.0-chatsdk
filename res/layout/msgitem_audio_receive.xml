@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/hs__msgDatePreferredPaddingBottom"
+    android:paddingTop="5dp" >
+
+    <TextView
+        android:id="@+id/sendDateLabel"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/hs__msgDatePreferredPaddingBottom"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/hs__listPreferredItemPaddingLeft"
+        android:visibility="visible" >
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/template_msg_item_head" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="10"
+            android:gravity="start"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/name_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/template_msg_item_name" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/messageText"
+                    style="@style/chat_content_date_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:autoLink="none"
+                    android:background="@drawable/king_msg_left_bg"
+                    android:text="5″"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/hs__messages_text_color"
+                    android:textColorLink="@color/hs__messages_link_color" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/timelayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/audioUnreadText"
+                            style="@style/chat_content_date_style"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/channel_red_dot"
+                            android:text=""
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/audioTimeText"
+                            style="@style/chat_content_date_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:text="1′5″"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/hs__messages_text_color" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/downloadtip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/timelayout"
+                        android:gravity="center_vertical"
+                        android:text="下载中..."
+                        android:textColor="@color/hs__messages_text_color"
+                        android:textSize="@dimen/cs__textSizeSmall" />
+
+                    <ImageView
+                        android:id="@+id/sendFail_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/timelayout"
+                        android:contentDescription="@string/cs__content_description_head_picture"
+                        android:gravity="center_vertical"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/sendfailed"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/send_progressbar"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/timelayout"
+                        android:gravity="center_vertical"
+                        android:indeterminateDrawable="@anim/update_loading_progressbar_anim"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/emptySpaceView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/error_tip"
+                    style="@style/chat_content_date_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="你已被禁言"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/hs__messages_name_color"
+                    android:textSize="@dimen/cs__textSizeName"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/error_tip_menu"
+                    style="@style/chat_content_date_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="去设置"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/hs__messages_name_color"
+                    android:textSize="@dimen/cs__textSizeName"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

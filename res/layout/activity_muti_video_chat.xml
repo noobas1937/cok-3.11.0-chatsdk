@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MutiPeerVideoActivity">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/masterView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:contentDescription="Hang up"
+        android:onClick="hangup"
+        android:src="@drawable/ic_action_end_call" />
+
+    <TextView
+        android:id="@+id/call_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="连接中"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:layout_alignTop="@+id/imageButton2"
+        android:layout_toEndOf="@+id/imageButton2" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
+
+        <RelativeLayout
+            android:id="@+id/peer_video_layout"
+            android:layout_width="100dp"
+            android:layout_height="80dp">
+
+            <org.webrtc.SurfaceViewRenderer
+                android:id="@+id/small_peer_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/peer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/peer_video_list"
+            android:layout_width="100dp"
+            android:layout_below="@+id/peer_video_layout"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

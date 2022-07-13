@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp" >
+
+    <FrameLayout
+        android:id="@+id/headImageContainer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/alliance_share_head_image_bg" >
+
+        <ImageView
+            android:id="@+id/headImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/cs__content_description_head_picture"
+            android:scaleType="fitCenter"
+            android:src="@drawable/g044" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/headImageContainer"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="@string/cs__chat_name_sample"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fcc488"
+            android:layout_marginBottom="5dp"
+            android:textSize="@dimen/cs__textMessage" />
+
+        <TextView
+            android:id="@+id/commentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:autoLink="none"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:paddingRight="10dp"
+            android:text="hello"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#e0c6aa"
+            android:textSize="@dimen/cs__textMessage" />
+
+        <TextView
+            android:id="@+id/timeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="none"
+            android:text="3小时前"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#795b43"
+            android:textSize="@dimen/cs__textSizeName" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+    
+    <ImageView 
+        android:id="@+id/bannerImage"
+        android:layout_width="21dp"
+        android:layout_height="15dp"
+        android:src="@drawable/fl_ad"
+        android:visibility="gone"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/officer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="官职"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/officer_text_bg"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#fff1e0"
+        android:textSize="@dimen/cs__textSizeName"/>
+    
+    <TextView
+        android:id="@+id/vipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="none"
+        android:text="@string/cs__chat_vip_sample"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/hs__messages_vip_color"
+        android:textSize="@dimen/cs__textSizeName"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/allianceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="none"
+        android:text="@string/cs__chat_alliance_sample"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/hs__messages_name_color"
+        android:textSize="@dimen/cs__textSizeName" />
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="none"
+        android:text="@string/cs__chat_name_sample"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/hs__messages_name_color"
+        android:textSize="@dimen/cs__textSizeName" />
+
+</LinearLayout>

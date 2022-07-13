@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <drawable name="empty_drawable">#00ffffff</drawable>
+  <color name="emoj_tab_selected">#D9D9D9</color>
+  <color name="emoj_tab_nomal">#ffffff</color>
+</resources>

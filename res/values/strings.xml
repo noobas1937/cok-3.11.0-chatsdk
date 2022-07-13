@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name_xiaomi">MiMsgDemo</string>
+    <string name="hello_world_xiaomi">Hello world!</string>
+    <string name="action_settings_xiaomi">Settings</string>
+    <string name="enter_description_xiaomi">enter your infomation</string>
+    <string name="sender">send_user</string>
+    <string name="sender_room">send_room</string>
+    <string name="sender_group">send_group</string>
+    <string name="send_audio">send_audio</string>
+    <string name="record_audio">start_record</string>
+    <string name="stop_record">stop_record</string>
+    <string name="play_voice">play</string>
+    <string name="stop_voice">stop</string>
+    <string name="normal">normal</string>
+    <string name="push_text">您好，我是 远方的客人</string>
+
+</resources>

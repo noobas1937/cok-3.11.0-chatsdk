@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:orientation="vertical" >
+
+        <ExpandableListView
+            android:id="@+id/voice_expand_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:childDivider="#00000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="15dp" 
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/settingConfirmBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/btn_green3"
+            android:paddingTop="10dp"
+            android:text="保存设置"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/cs__textSendButton" />
+        
+        <TextView
+            android:id="@+id/quitBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/btn_red"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="退出实时语音"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/cs__textSendButton" />
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:id="@+id/setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:orientation="vertical" >
+
+        <com.elex.chatservice.view.NewGridView
+            android:id="@+id/member_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="50dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scrollbars="none"
+            android:stretchMode="spacingWidth"
+            android:verticalSpacing="12dp" >
+        </com.elex.chatservice.view.NewGridView>
+
+    </LinearLayout>
+    -->
+
+</RelativeLayout>

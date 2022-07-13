@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sample1"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.example.sample1" >
+    </instrumentation>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/cok_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:taskAffinity="com.com.clash.of.kings.task.game"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <service
+            android:name="com.mi.mimsgsdk.service.MiMsgService"
+            android:exported="false"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.mi.mimsgsdk.service.MiMsgService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".WrapperChatServiceMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.elex.chatservice.view.ChatActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.ChannelListActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.ForumActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.MemberSelectorActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.WriteMailActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.VideoActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.MsgActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.PlayVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:screenOrientation="sensor"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.RecordVideoActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.AllianceShareActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.allianceshare.ImageBucketChooseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.allianceshare.ImageChooseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.allianceshare.ImageZoomActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.allianceshare.AllianceShareListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.allianceshare.AllianceShareDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.allianceshare.AllianceShareCommentListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.allianceshare.ImagePagerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.ChatRoomSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.lbs.NearByActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme" />
+        <activity
+            android:name="com.elex.chatservice.view.ChatRoomNameModifyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme"/>
+        <activity
+            android:name="com.elex.chatservice.view.emoj.EmojSubscribActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme"/>
+        <activity
+            android:name="com.elex.chatservice.danmu.view.DanmuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme"/>
+        <activity
+            android:name="com.elex.chatservice.view.kurento.RealtimeVoiceRoomActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme"/>
+        <activity
+            android:name="com.elex.chatservice.view.kurento.RealtimeVoiceRoomSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme"/>
+        <activity
+            android:name="com.elex.chatservice.view.recyclerrefreshview.RecyclerMainListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme"/>
+        <activity
+            android:name="com.elex.chatservice.view.recyclerrefreshview.RecyclerMsgListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme"/>
+        <activity
+            android:name="com.elex.chatservice.view.recyclerrefreshview.RecyclerSysMailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme"/>
+        <activity
+            android:name="com.elex.chatservice.view.MsgListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.com.clash.of.kings.task.chatservice"
+            android:theme="@style/Activity.Theme"/>
+        
+        
+        <service
+            android:name="com.elex.chatservice.view.danmu.DanmuService"
+            android:exported="false">
+        </service>
+        
+        <service
+            android:name="com.elex.chatservice.view.kurento.RealtimeVoiceService"
+            android:exported="false">
+        </service>
+        
+        <service
+            android:name="com.elex.chatservice.mqtt.MqttService"
+            android:exported="false">
+        </service>
+        
+    </application>
+
+</manifest>

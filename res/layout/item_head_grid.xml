@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/headImageContainer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/alliance_share_head_image_bg" >
+
+        <ImageView
+            android:id="@+id/headImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/cs__content_description_head_picture"
+            android:scaleType="fitCenter"
+            android:src="@drawable/g044" />
+    </FrameLayout>
+
+</LinearLayout>

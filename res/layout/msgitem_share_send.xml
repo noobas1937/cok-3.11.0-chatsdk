@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/hs__msgDatePreferredPaddingBottom"
+    android:paddingTop="5dp" >
+
+    <TextView
+        android:id="@+id/sendDateLabel"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/hs__msgDatePreferredPaddingBottom"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/hs__listPreferredItemPaddingRight"
+        android:visibility="visible" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.20" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.80"
+            android:baselineAligned="false"
+            android:gravity="end"
+            android:orientation="horizontal" >
+
+            <!-- 只有一个控件有layout_weight时，其具体值无意义，作用是wrap_content，不会超出边界被截断 -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0.6"
+                android:gravity="end"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/name_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/template_msg_item_name" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/sendstatus_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/sendFail_image"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:contentDescription="@string/cs__content_description_head_picture"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/sendfailed"
+                            android:visibility="gone" />
+
+                        <ProgressBar
+                            android:id="@+id/send_progressbar"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:indeterminateDrawable="@anim/update_loading_progressbar_anim"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/share_layout"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/sendstatus_layout"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <LinearLayout
+                            android:id="@+id/share_msg_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/chat_share_right_bg"
+                            android:clickable="true"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/share_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="2dp"
+                                android:gravity="left"
+                                android:maxLines="2"
+                                android:clickable="false"
+                                android:text="各位朋友各位朋友各位朋友"
+                                android:textColor="@color/hs__messages_text_color"
+                                android:textSize="@dimen/cs__textMessage" />
+
+                            <LinearLayout
+                                android:id="@+id/share_content_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:id="@+id/share_image"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="top"
+                                    android:padding="2dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/world_wild_reward" />
+
+                                <TextView
+                                    android:id="@+id/share_detail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="3dp"
+                                    android:gravity="start"
+                                    android:maxLines="2"
+                                    android:text="各位朋友,快来抢红包"
+                                    android:textColor="#88000000"
+                                    android:textSize="@dimen/cs__textSizeName" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/share_origin_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:gravity="left|center_vertical"
+                            android:background="@drawable/time_text_bg"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/share_origin_icon"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginLeft="5dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/icon_combat" />
+
+                            <TextView
+                                android:id="@+id/share_origin_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:paddingRight="5dp"
+                                android:text="ONE"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/template_msg_item_head" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nearby_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/emoj_group_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/emoj14" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/emoj_group_icon" >
+
+        <RelativeLayout
+            android:id="@+id/content_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/right_layout"
+                android:gravity="start"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="none"
+                    android:singleLine="true"
+                    android:text="呆萌兔"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/hs__messages_name_color"
+                    android:textSize="@dimen/cs__textMessage" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:autoLink="none"
+                    android:clickable="false"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="呆萌呆萌的"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/hs__messages_text_color"
+                    android:textSize="@dimen/cs__textSizeName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/right_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal" >
+
+                <ProgressBar
+                    android:id="@+id/down_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/buy_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:autoLink="none"
+                    android:background="@drawable/btn_green3"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="$ 3.5"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#C4B093"
+                    android:textSize="@dimen/cs__textMessage" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/content_top_layout"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="#000000" />
+    </RelativeLayout>
+
+</RelativeLayout>

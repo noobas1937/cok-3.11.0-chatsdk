@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="gs_roundImage_borderRadius" format="dimension" />
+    <attr name="gs_roundImage_type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="GSRoundImageView">
+        <attr name="gs_roundImage_borderRadius" />
+        <attr name="gs_roundImage_type" />
+    </declare-styleable>
+
+</resources>

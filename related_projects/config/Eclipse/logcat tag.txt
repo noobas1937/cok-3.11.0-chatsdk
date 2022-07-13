@@ -1,0 +1,13 @@
+cocos
+CrashReport
+chatservice all chatservice
+chatservice.core
+chatservice.msg
+chatservice.view
+chatservice.debug
+chatservice.websocket.status
+chatservice.websocket.send
+chatservice.websocket.recieve
+xiaomi
+mimsg
+com.firebase.androidchat

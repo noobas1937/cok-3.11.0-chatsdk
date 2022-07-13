@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/danmu_menu_panel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_grey02"
+        android:visibility="visible" />
+
+    <com.elex.chatservice.view.danmu.DanmuScrollMenuBar
+        android:id="@+id/danmu_bgcolor_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    </com.elex.chatservice.view.danmu.DanmuScrollMenuBar>
+
+</LinearLayout>

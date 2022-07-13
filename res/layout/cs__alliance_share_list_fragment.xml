@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/alliance_share_bg"
+    android:clickable="true" 
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <com.lee.pullrefresh.ui.PullToRefreshListView
+        android:id="@+id/allianceShareListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000">
+    </com.lee.pullrefresh.ui.PullToRefreshListView>
+    
+    <TextView android:id="@+id/nullAllianceShareTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:text="暂无联盟分享消息，赶快点击右上角的图标发送第一条联盟分享吧！"/>
+
+    <RelativeLayout
+        android:id="@+id/comment_input_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#000000"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:visibility="invisible" >
+
+        <Button
+            android:id="@+id/sendCommentBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_chat_send"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/hs__actionBarTextColorPrimary"
+            android:textSize="@dimen/cs__textSendButton" />
+
+        <EditText
+            android:id="@+id/comment_edit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/sendCommentBtn"
+            android:background="@drawable/text_field_bg2"
+            android:ems="10"
+            android:gravity="center_vertical|left"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine"
+            android:maxLength="500"
+            android:maxLines="@integer/hs__chat_max_lines"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="@color/hs__messages_text_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</FrameLayout>

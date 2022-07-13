@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="5dp" >
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.1" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.9"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/voice_tip"
+            style="@style/chat_content_date_style"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:autoLink="none"
+            android:lines="2"
+            android:background="@drawable/realtime_voice_right_bg"
+            android:text=""
+            android:textSize="@dimen/cs__textMessage"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#efddbc"
+            android:textColorLink="@color/hs__messages_link_color"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

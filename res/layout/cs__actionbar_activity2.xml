@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:id="@+id/cs__actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ui_gray_biaotilan"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cs__actionbar_backButton"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="-3dp"
+            android:background="@drawable/but_back" />
+
+        <TextView
+            android:id="@+id/cs__actionbar_titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="聊天"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/hs__actionBarTextColorPrimary"
+            android:textSize="@dimen/cs__textButtonTitle" />
+
+        <Button
+            android:id="@+id/actionbar_writeButton"
+            android:layout_width="83dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mail_btn_write_mail"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/actionbar_editButton"
+            android:layout_width="83dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-3dp"
+            android:background="@drawable/mail_btn_edit"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/actionbar_returnButton"
+            android:layout_width="83dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-3dp"
+            android:background="@drawable/mail_btn_fanhui"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/channel_list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/mailButtonBarLayout"
+        android:layout_below="@+id/cs__actionbar_layout"
+        android:background="#c7b897" >
+
+        <com.lee.pullrefresh.ui.PullToRefreshSwipeListView
+        	android:id="@+id/channelListPullView"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:cacheColorHint="#00000000" >
+
+    	</com.lee.pullrefresh.ui.PullToRefreshSwipeListView>
+    	
+        <TextView
+            android:id="@+id/tip_no_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="没有邮件了fdsfwerw发生地方eqfdsfewrwefwdfqwerqdfdafe"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/mailButtonBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mail_list_edit_buttonbar_bg"
+        android:gravity="center_vertical"
+        android:padding="5dp" >
+
+        <CheckBox
+            android:id="@+id/mailButtonBarAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:button="@drawable/mail_list_edit_checkbox"
+            android:checked="false"
+            android:paddingLeft="10dp"
+            android:text="Check all"
+            android:textColor="#ff5f4015"
+            android:textSize="@dimen/cs__textTitle" />
+
+        <LinearLayout
+            android:id="@+id/mail_reward_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/mailButtonBarReward"
+                android:layout_width="@dimen/cs__mailButtonBarIconSize"
+                android:layout_height="@dimen/cs__mailButtonBarIconSize"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mail_list_edit_gift" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="25"
+            android:gravity="center" >
+
+            <CheckBox
+                android:id="@+id/mailButtonBarUnread"
+                android:layout_width="@dimen/cs__mailButtonBarIconSize"
+                android:layout_height="@dimen/cs__mailButtonBarIconSize"
+                android:button="@drawable/mailreadstate_checkbox"
+                android:checked="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="25"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/mailButtonBarWrite"
+                android:layout_width="@dimen/cs__mailButtonBarIconSize"
+                android:layout_height="@dimen/cs__mailButtonBarIconSize"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mail_list_edit_write" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="25"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/mailButtonBarDelete"
+                android:layout_width="@dimen/cs__mailButtonBarIconSize"
+                android:layout_height="@dimen/cs__mailButtonBarIconSize"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mail_list_edit_delete" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/cs__activity_progress_bar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@anim/update_loading_progressbar_anim"
+        android:visibility="gone" >
+    </ProgressBar>
+
+</RelativeLayout>

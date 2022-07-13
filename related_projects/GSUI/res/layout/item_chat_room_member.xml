@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/member_head_layout"
+        android:layout_width="50dp"
+        android:layout_height="50dp" >
+
+        <com.elex.im.ui.util.FixedAspectRatioFrameLayout
+            android:id="@+id/headImageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.elex.im.ui.util.RoundImageView
+                android:id="@+id/headImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/solid_circle"
+                android:scaleType="fitCenter"
+                android:src="@drawable/g044" >
+            </com.elex.im.ui.util.RoundImageView>
+        </com.elex.im.ui.util.FixedAspectRatioFrameLayout>
+
+        <ImageView
+            android:id="@+id/member_single_del_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="right|top"
+            android:src="@drawable/single_del_btn" 
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小小"
+        android:singleLine="true"
+        android:textColor="#553e1f"
+        android:textSize="11sp" />
+
+</LinearLayout>

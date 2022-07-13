@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popFrameLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/fragmentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" >
+
+        <LinearLayout
+            android:id="@+id/buttonsLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/chuzheng_frame02"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/buttonCountry"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_qieye_01"
+                android:text="国家"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/hs__header_button_text_highlight_color"
+                android:textSize="@dimen/cs__textButtonTitle" />
+            <!-- android:textStyle="bold" -->
+
+            <Button
+                android:id="@+id/buttonAllie"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_qieye_01"
+                android:text="联盟"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/hs__header_button_text_highlight_color"
+                android:textSize="@dimen/cs__textButtonTitle" />
+
+            <Button
+                android:id="@+id/buttonFriend"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_qieye_01"
+                android:text="自定义"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/hs__header_button_text_highlight_color"
+                android:textSize="@dimen/cs__textButtonTitle" />
+
+            <!-- android:textStyle="bold" -->
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_below="@+id/buttonsLinearLayout" >
+
+            <RelativeLayout
+                android:id="@+id/messagesListLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="true" >
+
+                <RelativeLayout
+                    android:id="@+id/hs__messagesListLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true" >
+
+                    <FrameLayout
+                        android:id="@+id/hs__noAllianceLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.50" >
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.20" >
+                                </FrameLayout>
+
+                                <TextView
+                                    android:id="@+id/joinAllianceTipText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.60"
+                                    android:gravity="center"
+                                    android:text="您未加入联盟，暂时无法使用联盟聊天频道"
+                                    android:textColor="#4D2500"
+                                    android:textSize="@dimen/cs__textButtonTitle" />
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.20" >
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.50" >
+
+                                <Button
+                                    android:id="@+id/joinAllianceBtn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/btn_green3"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:paddingBottom="15dp"
+                                    android:paddingTop="15dp"
+                                    android:text="加入联盟"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="@dimen/cs__textButtonTitle" />
+                            </FrameLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/hs__dragon_chat_tip_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="0.15" />
+
+                        <TextView
+                            android:id="@+id/dragon_chat_tip_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.7"
+                            android:gravity="center"
+                            android:text="巨龙战场中世界频道不可用"
+                            android:textColor="#4D2500"
+                            android:textSize="@dimen/cs__textButtonTitle" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="0.15" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/custom_chat_tip_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/addCustomChatBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/btn_green3"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:text="添加联系人或聊天室"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/cs__textSizeMedium" />
+
+                        <TextView
+                            android:id="@+id/custom_chat_tip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/addCustomChatBtn"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="将联系人或者聊天室添加至此自定义频道中，可快速联系他们"
+                            android:textColor="#4D2500"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/random_chat_destory_tip_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/random_chat_destory_tip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/joinCustomChatBtn"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="聊天室里太久没人说话，已经自动解散了。/n领主大人看看其他聊天室吧！"
+                            android:textColor="#4D2500"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/joinCustomChatBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/btn_green3"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:text="添加联系人或聊天室"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/cs__textSizeMedium" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/random_room_join_tip_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/retry_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/btn_green3"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:text="retry"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/cs__textSizeMedium" />
+
+                        <TextView
+                            android:id="@+id/random_room_join_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/retry_btn"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="正在分配房间，请等待"
+                            android:textColor="#4D2500"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/random_chat_tip_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="visible" >
+
+                        <FrameLayout
+                            android:id="@+id/addLocalRandomChat_layout"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal" >
+
+                            <com.elex.chatservice.util.FixedAspectRatioFrameLayout
+                                android:id="@+id/addLocalRandomChat_Container"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center" >
+
+                                <com.elex.chatservice.util.RoundImageView
+                                    android:id="@+id/addLocalRandomChat_langImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/solid_circle"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/lang_zh_cn" >
+                                </com.elex.chatservice.util.RoundImageView>
+                            </com.elex.chatservice.util.FixedAspectRatioFrameLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/circle_trasparent_bg" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/addLocalRandomChatBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_green3"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:text="添加联系人或聊天室"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/cs__textSizeMedium" />
+
+                        <TextView
+                            android:id="@+id/local_random_chat_tip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="将联系人或者聊天室添加至此自定义频道中，可快速联系他们"
+                            android:textColor="#4D2500"
+                            android:textSize="13sp" />
+
+                        <FrameLayout
+                            android:id="@+id/addGlobalRandomChat_layout"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal" >
+
+                            <com.elex.chatservice.util.FixedAspectRatioFrameLayout
+                                android:id="@+id/addGlobalRandomChat_Container"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center" >
+
+                                <com.elex.chatservice.util.RoundImageView
+                                    android:id="@+id/addGlobalRandomChat_langImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/solid_circle"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/random_global" >
+                                </com.elex.chatservice.util.RoundImageView>
+                            </com.elex.chatservice.util.FixedAspectRatioFrameLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/circle_trasparent_bg" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/global_random_chat_tip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="将联系人或者聊天室添加至此自定义频道中，可快速联系他们"
+                            android:textColor="#4D2500"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/battle_field_tip_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/battle_field_tip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="您还未加入战场，去传送门看看是否有想要参加的活动"
+                            android:textColor="#4D2500"
+                            android:textSize="@dimen/cs__textSizeName" />
+
+                        <TextView
+                            android:id="@+id/battle_field_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/battle_field_tip_text"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/btn_green3"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:text="去看看"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/cs__textSizeMedium" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.elex.chatservice.view.SlidingUpPanelLayout
+                    android:id="@+id/country_sliding_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom" >
+
+                    <RelativeLayout
+                        android:id="@+id/country_msg_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/country_dragView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sliding_panel_bg"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <TextView
+                            android:id="@+id/country_null_sys_tip"
+                            style="@style/chat_content_date_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="当前没有系统消息"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/hs__messages_text_color"
+                            android:visibility="gone" />
+
+                        <com.elex.chatservice.view.listview.PullDownToLoadMoreView
+                            android:id="@+id/country_sys_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="#000000" >
+
+                            <ListView
+                                android:id="@+id/country_sys_msg_listview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" >
+                            </ListView>
+                        </com.elex.chatservice.view.listview.PullDownToLoadMoreView>
+
+                        <RelativeLayout
+                            android:id="@+id/country_drag_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:gravity="bottom"
+                            android:padding="5dp" >
+
+                            <TextView
+                                android:id="@+id/new_country_sys_message"
+                                style="@style/chat_content_date_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/new_country_sys_sliding_btn"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/hs__messages_text_color"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/new_country_sys_sliding_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/sliding_down" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.elex.chatservice.view.SlidingUpPanelLayout>
+
+                <com.elex.chatservice.view.SlidingUpPanelLayout
+                    android:id="@+id/alliance_sliding_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom" >
+
+                    <RelativeLayout
+                        android:id="@+id/alliance_msg_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/alliance_dragView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sliding_panel_bg"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <TextView
+                            android:id="@+id/alliance_null_sys_tip"
+                            style="@style/chat_content_date_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="当前没有系统消息"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/hs__messages_text_color"
+                            android:visibility="gone" />
+
+                        <com.elex.chatservice.view.listview.PullDownToLoadMoreView
+                            android:id="@+id/alliance_sys_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="#000000" >
+
+                            <ListView
+                                android:id="@+id/alliance_sys_msg_listview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" >
+                            </ListView>
+                        </com.elex.chatservice.view.listview.PullDownToLoadMoreView>
+
+                        <RelativeLayout
+                            android:id="@+id/alliance_drag_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:gravity="bottom"
+                            android:padding="5dp" >
+
+                            <TextView
+                                android:id="@+id/new_alliance_sys_message"
+                                style="@style/chat_content_date_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/new_alliance_sys_sliding_btn"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/hs__messages_text_color"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/new_alliance_sys_sliding_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/sliding_down" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.elex.chatservice.view.SlidingUpPanelLayout>
+
+                <RelativeLayout
+                    android:id="@+id/top_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" >
+
+                    <FrameLayout
+                        android:id="@+id/top_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#7F000000"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/custom_channel_setting_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/custom_channel_settting_btn"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/icon_chilun" />
+
+                            <TextView
+                                android:id="@+id/custom_channel_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:gravity="center_vertical"
+                                android:text="多人聊天"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#eebe6a"
+                                android:textSize="@dimen/cs__textMessage" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/country_exchange_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center" >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:visibility="visible" >
+
+                                <TextView
+                                    android:id="@+id/country_channel_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="2dp"
+                                    android:gravity="center_vertical"
+                                    android:text="战场"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#eebe6a"
+                                    android:textSize="@dimen/cs__textMessage" />
+
+                                <ImageView
+                                    android:id="@+id/country_exchange_btn"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="5dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/country_exchange" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/country_sys_top_icon"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/alliance_sys_top_btn" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/alliance_sys_top_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/alliance_sys_top_icon"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/alliance_sys_top_btn" />
+
+                            <TextView
+                                android:id="@+id/alliance_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:gravity="center_vertical"
+                                android:text="ALINCE"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#eebe6a"
+                                android:textSize="@dimen/cs__textMessage" />
+                        </RelativeLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/scroll_frame_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/top_layout"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/horn_scroll_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/chat_notice_bg2"
+                            android:gravity="center_vertical"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/horn_close_btn"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/chat_notice_cha" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="2dp"
+                                android:layout_toLeftOf="@+id/horn_close_btn"
+                                android:gravity="center_vertical" >
+
+                                <ImageView
+                                    android:id="@+id/horn_image"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/chat_notice_icon1" />
+
+                                <TextView
+                                    android:id="@+id/horn_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:text="(TTD):xxx:"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/cs__textMessage" />
+
+                                <com.elex.chatservice.view.autoscroll.ScrollText
+                                    android:id="@+id/horn_scroll_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="none"
+                                    android:paddingLeft="5dp"
+                                    android:singleLine="true"
+                                    android:text="Every time announcement spend 10 gold COINS"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/cs__textMessage" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/battle_horn_scroll_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/chat_notice_bg2"
+                            android:gravity="center_vertical"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/battle_horn_close_btn"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/chat_notice_cha" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="2dp"
+                                android:layout_toLeftOf="@+id/battle_horn_close_btn"
+                                android:gravity="center_vertical" >
+
+                                <ImageView
+                                    android:id="@+id/battle_horn_image"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/chat_notice_icon1" />
+
+                                <TextView
+                                    android:id="@+id/battle_horn_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:text="(TTD):xx:"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/cs__textMessage" />
+
+                                <com.elex.chatservice.view.autoscroll.ScrollText
+                                    android:id="@+id/battle_horn_scroll_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="none"
+                                    android:paddingLeft="5dp"
+                                    android:singleLine="true"
+                                    android:text="Every time announcement spend 10 gold COINS"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/cs__textMessage" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </FrameLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-1dp"
+                    android:layout_marginTop="-2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ui_huitiao2" />
+
+                <LinearLayout
+                    android:id="@+id/tooltipLayout"
+                    style="@style/new_msg_tooltip_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="80dp"
+                    android:clickable="true"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/tooltipArrow"
+                        android:layout_width="13dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/new_msg_tooltip_arrow" />
+
+                    <TextView
+                        android:id="@+id/tooltipLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:text="21条新消息"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#8c4931"
+                        android:textSize="@dimen/cs__textSendButton" />
+                </LinearLayout>
+
+                <!--
+        <RelativeLayout
+		    android:id="@+id/tooltipLayout2"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentTop="true"
+		    android:layout_marginTop="5dp"
+		    android:background="#ffffffff"
+		    android:clickable="true"
+		    android:orientation="horizontal" >
+	            <TextView
+	                android:id="@+id/tooltipLabel2"
+		    		android:layout_marginTop="12dp"
+		    		android:layout_marginBottom="4dp"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:layout_centerVertical="true"
+	                android:text="21条新消息"
+	                android:textAppearance="?android:attr/textAppearanceSmall"
+	                android:textColor="@color/hs__actionBarStackedColor"
+	                android:textSize="@dimen/cs__textSendButton" />
+	    </RelativeLayout>
+                -->
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/custom_setting_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ui_paper_3c"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/add_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/chat_room_set_btn_normal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="添加联系人或聊天室"
+                    android:textColor="#000000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/add_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="点击头像可移除当前联系人或者聊天室(移除不会删掉该聊天对象)\n勾选下方头像可更换聊天对象"
+                    android:textColor="#553e1f"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <FrameLayout
+                            android:id="@+id/member_head_layout"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal" >
+
+                            <com.elex.chatservice.util.FixedAspectRatioFrameLayout
+                                android:id="@+id/headImageContainer"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center" >
+
+                                <com.elex.chatservice.util.RoundImageView
+                                    android:id="@+id/headImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/solid_circle"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/g044" >
+                                </com.elex.chatservice.util.RoundImageView>
+                            </com.elex.chatservice.util.FixedAspectRatioFrameLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/circle_trasparent_bg" />
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/custom_mod_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/mod" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="小小"
+                        android:textColor="#000000"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/mail_list_divider" />
+
+                <ExpandableListView
+                    android:id="@+id/custom_expand_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="#00000000"
+                    android:childDivider="#00000000" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/inputFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_grey02"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/custom_settting_btn_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#000000"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/custom_setting_confim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/btn_green3"
+                            android:gravity="center"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="确定"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/cs__textSizeMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/relativeLayout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-1dp"
+                        android:background="@drawable/chuzheng_frame02"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal" >
+
+                        <CheckBox
+                            android:id="@+id/horn_checkbox"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/horn_checkbox"
+                            android:button="@null" />
+
+                        <CheckBox
+                            android:id="@+id/emoj_checkbox"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/emoj_checkbox" 
+                            android:button="@null"/>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/hs__messageText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:autoText="true"
+                            android:background="@drawable/text_field_bg2"
+                            android:completionThreshold="1"
+                            android:ems="10"
+                            android:imeOptions="actionSend"
+                            android:inputType="textMultiLine"
+                            android:maxLength="500"
+                            android:maxLines="@integer/hs__chat_max_lines"
+                            android:text=""
+                            android:textAppearance="?android:attr/textAppearance"
+                            android:textColor="@color/hs__messages_text_color"
+                            android:textColorHint="#939292"
+                            android:textSize="@dimen/cs__textMessage" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="3dp" >
+
+                            <LinearLayout
+                                android:id="@+id/voice_rec_button_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:orientation="vertical"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <Button
+                                    android:id="@+id/voice_rec_button"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:background="@drawable/voice_mic"
+                                    android:clickable="false" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/hs__sendMessageLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:orientation="vertical"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:visibility="invisible" >
+
+                                <Button
+                                    android:id="@+id/hs__sendMessageBtn"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:background="@drawable/btn_chat_send"
+                                    android:text=""
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/hs__actionBarTextColorPrimary"
+                                    android:textSize="@dimen/cs__textSendButton" />
+
+                                <TextView
+                                    android:id="@+id/wordCountTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="0/500"
+                                    android:textColor="@color/hs__actionBarTextColorPrimary"
+                                    android:textSize="@dimen/cs__textSizeSmall"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <com.elex.chatservice.view.emoj.EmojPanel
+                        android:id="@+id/emoj_panel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+                    </com.elex.chatservice.view.emoj.EmojPanel>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

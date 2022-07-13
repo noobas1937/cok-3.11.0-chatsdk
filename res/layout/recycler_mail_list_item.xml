@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/cs__list_divider_height" />
+
+    <RelativeLayout
+        android:id="@+id/mail_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <CheckBox
+            android:id="@+id/mail_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/mail_list_edit_checkbox"
+            android:checked="false"
+            android:visibility="gone" />
+
+        <com.elex.chatservice.util.FixedAspectRatioFrameLayout
+            android:id="@+id/mail_icon_layout"
+            android:layout_width="@dimen/cs__list_icon_width"
+            android:layout_height="@dimen/cs__list_icon_width"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/mail_checkbox" >
+
+            <com.elex.chatservice.util.RoundImageView
+                android:id="@+id/mail_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/solid_circle"
+                android:scaleType="fitCenter"
+                android:src="@null" />
+        </com.elex.chatservice.util.FixedAspectRatioFrameLayout>
+
+        <LinearLayout
+            android:id="@+id/content_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/mail_icon_layout"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/unread_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/channel_red_dot"
+                    android:textSize="1sp" />
+
+                <TextView
+                    android:id="@+id/mail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/top_right_layout"
+                    android:layout_toRightOf="@+id/unread_count"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Inboxes"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/cs__textTitle" />
+
+                <LinearLayout
+                    android:id="@+id/top_right_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/mail_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#64583A"
+                        android:textSize="@dimen/cs__textSummary" />
+
+                    <ImageView
+                        android:id="@+id/list_item_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/mail_list_arrow" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/channel_icon_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+-
+-                        
+
+                    <TextView
+                        android:id="@+id/recycle_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:text="23天后删除"
+                        android:textColor="#852828"
+                        android:textSize="@dimen/cs__textSummary"
+                        android:visibility="gone" />
+-
+-                        
+
+                    <ImageView
+                        android:id="@+id/lock_icon"
+                        android:layout_width="@dimen/cs__rewardIconSize"
+                        android:layout_height="@dimen/cs__rewardIconSize"
+                        android:src="@drawable/mail_list_edit_favorite"
+                        android:visibility="invisible" />
+-
+-                        
+
+                    <ImageView
+                        android:id="@+id/reward_icon"
+                        android:layout_width="@dimen/cs__rewardIconSize"
+                        android:layout_height="@dimen/cs__rewardIconSize"
+                        android:src="@drawable/mail_list_edit_gift"
+                        android:visibility="invisible" />
+-                    
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/mail_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toLeftOf="@+id/channel_icon_layout"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:text=""
+                    android:textColor="#64583A"
+                    android:textSize="@dimen/cs__textSummary" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cs__list_divider_height"
+        android:gravity="center_vertical" >
+
+        <View
+            android:id="@+id/stubview"
+            android:layout_width="@dimen/cs__list_left_stub_width"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_toRightOf="@+id/stubview"
+            android:background="@drawable/mail_list_divider"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+</LinearLayout>
